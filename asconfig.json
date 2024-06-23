@@ -1,0 +1,46 @@
+{
+	"compilerOptions": {
+		"output": "bin-debug/BlueObject.swf",
+		"source-path": [
+			"src"
+		],
+		"library-path": [
+			"libs"
+		]
+	},
+	"files": [
+		"src/BlueObject.mxml"
+	],
+	"application": "src/BlueObject-app.xml",
+	"additionalOptions": "-locale=en_US,es_ES,pt_BR\r\n-source-path=locale/{locale}\r\n-allow-source-path-overlap=true\r\n-swf-version=40\r\n",
+	"airOptions": {
+		"output": "bin",
+
+		"files": [
+            {
+                "file": "assets/icon",
+                "path": "icon"
+            },
+            {
+                "file": "src/firstRun/versions.xml",
+                "path": "versions.xml"
+            },
+			{
+                "file": "src/firstRun/sprites.xml",
+                "path": "sprites.xml"
+            }
+		],
+
+		"signingOptions": {
+			"keystore": "blue_object.p12",
+			"storetype": "pkcs12"
+		}
+	},
+	"config": "air",
+	"workers": [
+		{
+			"file": "src/BlueObjectWorker.as",
+			"output": "workerswfs/BlueObjectWorker.swf"
+		}
+	]
+}
